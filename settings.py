@@ -42,7 +42,7 @@ LOGIN_REDIRECT_URL = '/'
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '()e%6g67)ai1hv%ny_lds45=c*a7^7&)yh!*2r(aidkt#8cbzp'
+SECRET_KEY = '0x8badf00d'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
