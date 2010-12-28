@@ -23,3 +23,7 @@ class Language(models.Model):
 	def __unicode__(self):
 		description = '%s (%s)' % ( self.name, self.version )
 		return description
+	
+	def GetLowercaseName(self):
+		return self.name.lower()
+	

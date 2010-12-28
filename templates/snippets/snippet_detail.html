@@ -3,7 +3,7 @@
 {% load syntax_color %}
 <h2><a href="{% url snippet_edit object.id %}">{{ object.name }}</a></h2>
 
-{{ object.code|colorize_table:"c" }}
+{{ object.code|colorize_table:object.lang.GetLowercaseName }}
 
 <p id="snippet_footer">
 	Snippet in {{ object.lang.name }} by <span id="author">{{ object.author }}</span> written on <span id="pub_date">{{ object.pub_date }}</span>
