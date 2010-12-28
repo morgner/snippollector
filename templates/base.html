@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<title>Snippollector</title>
+		<link type="text/css" rel="stylesheet" href="/site-media/css/base.css" />
+		<link type="text/css" rel="stylesheet" href="/site-media/css/pygments.css" />
+	</head>
+
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1>Welcome to snippollector!</h1>
+			</div>
+
+			<div id="menu_main">
+				<a href="{% url snippet_list %}">HOME</a>
+			</div>
+			
+			<div id="content">
+{% block content %}{% endblock %}
+			</div>
+
+			<div id="footer">
+				<p>
+					Created by Felix Morgner. published under GLPv3
+				</p>
+			</div>
+
+		</div>
+	</body>
+
+</html>

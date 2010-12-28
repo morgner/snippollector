@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2><a href="/admin/snippets/snippet/{{ object.id }}/">{{ object.name }}</a></h2>
+
+<form action="" method="post">
+{{ form.as_p }}
+{% csrf_token %}
+<input type="submit" value="Submit" />
+</form>
+
+<p id="snippet_footer">
+- footer -
+</p>
+{% endblock %}

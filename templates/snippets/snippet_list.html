@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div id="paginator">{% if is_paginated %}{% load paginator %}{% paginator %}{% endif %}</div>
+
+{% if object_list %}
+    <ul id='object_list'>
+    {% for object in object_list %}
+      <li><a href="{% url snippet_detail object.id %}">{{ object.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No snippets are available.</p>
+{% endif %}
+
+{% endblock %}
