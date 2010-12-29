@@ -19,8 +19,8 @@ snippet_detail = {
 }
 
 urlpatterns = patterns('django.views.generic.list_detail',
-  url(r'^$',                     'object_list',   snippet_dict,   name='snippet_list'),
-  url(r'^(?P<object_id>\d+)/$',  'object_detail', snippet_detail, name='snippet_detail'),
+  url(r'^$',                    'object_list',   snippet_dict,   name='snippet_list'),
+  url(r'^(?P<object_id>\d+)/$', 'object_detail', snippet_detail, name='snippet_detail'),
   )
 
 urlpatterns += patterns('django.views.generic.simple',
@@ -28,5 +28,6 @@ urlpatterns += patterns('django.views.generic.simple',
   )
 
 urlpatterns += patterns('snippets.views',
-  url(r'^(?P<object_id>\d+)/edit$', 'edit', name='snippet_edit'),
+  url(r'^(?P<object_id>\d+)/edit$',  'edit',  name='snippet_edit'),
+  url(r'^(?P<object_id>\d+)/erase$', 'erase', name='snippet_erase'),
   )

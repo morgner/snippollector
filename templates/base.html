@@ -17,7 +17,7 @@
 
 			<div id="menu_main">
 				<a href="{% url snippet_list %}">HOME</a>
-				<a href="{% url snippet_new %}">NEW</a>				
+				<a href="{% url snippet_new %}">NEW</a>{% block erase %}{% endblock %}
 			</div>
 			
 			<div id="content">

@@ -1,4 +1,6 @@
 {% extends "base.html" %}
+{% if user.is_staff %}{% block erase %}
+				<a href="{% url snippet_erase object.id %}">ERASE</a>{% endblock %}{% endif  %}
 {% block content %}
 {% load syntax_color %}
 <h2><a href="{% url snippet_edit object.id %}">{{ object.name }}</a></h2>

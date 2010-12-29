@@ -6,7 +6,7 @@
 {% if object_list %}
     <ul id='object_list'>
     {% for object in object_list %}
-      <li><a href="{% url snippet_detail object.id %}">{{ object.name }}</a></li>
+      <li>{% if user.is_staff %}<a class="erase_item" href="{% url snippet_erase object.id %}">e</a> {% endif %}<a href="{% url snippet_detail object.id %}">{{ object.name }}</a></li>
     {% endfor %}
     </ul>
 {% else %}

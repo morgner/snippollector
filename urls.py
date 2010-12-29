@@ -19,7 +19,7 @@ urlpatterns += patterns('django.views.generic.simple',
   )
 
 urlpatterns += patterns('',
-  url(r'^snippets/', include('snippets.urls')),
+  url(r'^snippets/',  include('snippets.urls')),
   url(r'^admin/(.*)', admin.site.root),
   )
 
