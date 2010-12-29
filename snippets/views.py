@@ -20,7 +20,10 @@ def edit( request, object_id ):
 	from snippets.models import Snippet
 	from snippets.forms  import SnippetForm
 
-	snippet = Snippet.objects.get( id = object_id )
+	try:
+		snippet = Snippet.objects.get( id = object_id )
+	except:
+		snippet = None
 	form    = SnippetForm( request.POST or None, instance = snippet )
 
 	if form.is_valid():

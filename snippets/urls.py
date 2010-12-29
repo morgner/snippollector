@@ -23,9 +23,9 @@ urlpatterns = patterns('django.views.generic.list_detail',
   url(r'^(?P<object_id>\d+)/$',  'object_detail', snippet_detail, name='snippet_detail'),
   )
 
-#urlpatterns += patterns('django.views.generic.simple',
-#  url(r'^new$', 'redirect_to', { 'url': '/snippets/0/edit' }, name='snippet_new'),
-#  )
+urlpatterns += patterns('django.views.generic.simple',
+  url(r'^new$', 'redirect_to', { 'url': '0/edit' }, name='snippet_new'),
+  )
 
 urlpatterns += patterns('snippets.views',
   url(r'^(?P<object_id>\d+)/edit$', 'edit', name='snippet_edit'),
