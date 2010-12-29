@@ -35,7 +35,6 @@ USE_I18N = True
 USE_L10N = True
 
 MEDIA_ROOT = os.path.join( PROJECT_ROOT, 'site-media')
-# MEDIA_URL  = u'http://%s%s/%s' % (SNIPPETS_HTTP_HOST, SNIPPETS_HTTP_PORT, 'site-media',)
 MEDIA_URL  = u'/site-media/'
 
 LOGIN_REDIRECT_URL = '/'
@@ -48,7 +47,6 @@ SECRET_KEY = '0x8badf00d'
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -71,7 +69,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.admin',
-		'syntax_colorize',
+    'syntax_colorize',
     SNIPPET_APPL,
 )
 
