@@ -7,15 +7,6 @@ from pygments.lexers import get_lexer_by_name,guess_lexer,ClassNotFound
 
 register = template.Library()
 
-def generate_pygments_css(path=None):
-    if path is None:
-        import os
-        path = os.path.join(os.getcwd(),'pygments.css')
-    f = open(path,'w')
-    f.write(HtmlFormatter(style='native').get_style_defs('.highlight'))
-    f.close()
-
-
 def get_lexer(value,arg):
     if arg is None:
         return guess_lexer(value)
